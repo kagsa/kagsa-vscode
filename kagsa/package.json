@@ -1,0 +1,25 @@
+{
+    "name": "kagsa",
+    "displayName": "Kagsa",
+    "description": "Kagsa Programming Language",
+    "version": "1.0.0",
+    "engines": {
+        "vscode": "^1.67.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "kagsa",
+            "aliases": ["Kagsa", "kagsa"],
+            "extensions": [".kg"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "kagsa",
+            "scopeName": "source.kg",
+            "path": "./syntaxes/kagsa.tmLanguage.json"
+        }]
+    }
+}
