@@ -1,0 +1,111 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Kagsa",
+	"patterns": [
+		{
+			"include": "#keywords-group-1"
+		},
+		{
+			"include": "#keywords-group-2"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#strings-with-newlines"
+		},
+		{
+			"include": "#constant-variables"
+		},
+		{
+			"include": "#modules"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#comments-with-newlines"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#class-variables"
+		},
+		{
+			"include": "#format-string"
+		}
+	],
+	"repository": {
+		"keywords-group-1": {
+			"patterns": [{
+				"name": "keyword.control.kagsa",
+				"match": "\\b(include|input|write|if|elseif|else|while|func|break|return|global|for|try|catch|delvar|contine|class)\\b"
+			}]
+		},
+		"keywords-group-2": {
+			"patterns": [{
+				"name": "constant.language.kagsa",
+				"match": "\\b(var|string|int|float|dict|list)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.kagsa",
+			"patterns": [{
+				"name": "string.quoted.double.kagsa",
+				"match": "'(.*?)%\\{|\\}(.*?)%\\{|\\}(.*?)'|'(.*?)'|\"(.*?)%\\{|\\}(.*?)%\\{|\\}(.*?)\"|\"(.*?)\""
+			}]
+		},"strings-with-newlines": {
+			"name": "string.quoted.double.kagsa",
+			"patterns": [{
+				"name": "string.quoted.double.kagsa",
+				"begin": "``",
+				"end": "``"
+			}]
+		},
+		"constant-variables":{
+			"patterns": [{
+				"name": "constant.language.kagsa",
+				"match": "\\b(true|false|none|nl|not)\\b"
+			}]
+		},
+		"modules": {
+			"patterns": [{
+				"name": "support.type.exception.kagsa",
+				"match": "\\b(Automation|Math|Random|Regex|System|Code|File|JSON|HTTP|Time)\\b"
+			}]
+		},
+		"comments": {
+			"patterns": [{
+				"name": "comment.line.shebang.kagsa",
+				"match": "//..*|//"
+			}]
+		},
+		"comments-with-newlines": {
+			"patterns": [{
+				"name": "comment.line.shebang.kagsa",
+				"begin":"/\\*",
+				"end":"\\*/"
+			}]
+		},
+		"numbers": {
+			"patterns": [{
+				"name":"constant.numeric.float.kagsa",
+				"match": "\\d+\\.\\d+|\\d+|\\-\\d+"
+			}]
+		},
+		"class-variables": {
+			"patterns": [{
+				"name": "support.function.magic.kagsa",
+				"match": "@[a-zA-Z0-9]*(\\.[0-9a-zA-Z_@$^~?][0-9a-zA-Z_@$^~?]*|\\.[0-9a-zA-Z_@$^~?])*"
+			}]
+		},
+		"format-string": {
+			"patterns": [{
+				"name": "constant.language.kagsa",
+				"match": "%\\{[0-9a-zA-Z_@$^~?][0-9a-zA-Z_@$^~?]*|#[0-9a-zA-Z_@$^~?]\\}"
+			}]
+		}
+	},
+	"scopeName": "source.kg"
+}
