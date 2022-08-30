@@ -40,7 +40,7 @@
 		"keywords-group-1": {
 			"patterns": [{
 				"name": "keyword.control.kagsa",
-				"match": "\\b(include|input|write|if|elseif|else|while|func|break|return|global|for|try|catch|delvar|contine|class)\\b"
+				"match": "\\b(jump|include|input|write|if|elseif|else|while|func|break|return|global|for|try|catch|delvar|contine|class)\\b"
 			}]
 		},
 		"keywords-group-2": {
