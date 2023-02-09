@@ -1,13 +1,19 @@
 {
     "name": "kagsa",
-    "displayName": "Kagsa",
-    "description": "Kagsa Programming Language",
-    "version": "1.0.0",
+    "displayName": "KAGSA",
+    "description": "KAGSA programming language syntax highlighting for VSCode.",
+    "publisher":"kagsa",
+    "icon": "images/icon.png",
+    "version": "1.1.1",
     "engines": {
         "vscode": "^1.67.0"
     },
     "categories": [
-        "Programming Languages"
+        "Programming Languages",
+        "Snippets",
+        "Themes",
+        "Extension Packs",
+        "Linters"
     ],
     "contributes": {
         "languages": [{
@@ -21,5 +27,9 @@
             "scopeName": "source.kg",
             "path": "./syntaxes/kagsa.tmLanguage.json"
         }]
+    },
+    "repository": {
+        "type": "git", 
+        "url": "https://github.com/kagsa/kagsa"
     }
 }
